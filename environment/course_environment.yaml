@@ -8,7 +8,11 @@ dependencies:
   - matplotlib
   - lue
   - fmt=8.0.0
+  - pcraster
+  - xarray
+  - pandas
+  - gdal
+  - networkx
   - pip
   - pip:
     - https://campo.computationalgeography.org/download/campo-0.3.0-py3-none-any.whl
-
