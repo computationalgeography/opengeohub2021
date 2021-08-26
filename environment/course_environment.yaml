@@ -13,6 +13,7 @@ dependencies:
   - pandas
   - gdal
   - networkx
+  - ffmpeg
   - pip
   - pip:
     - https://campo.computationalgeography.org/download/campo-0.3.0-py3-none-any.whl

@@ -2,3 +2,4 @@ __pycache__/
 *.py[cod]
 *.lue
 *.csv
+notebook/.ipynb_checkpoints/
