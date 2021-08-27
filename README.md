@@ -51,13 +51,13 @@ You can now start the Jupyter notebook from the command prompt. The notebook wil
 
 Background on DaisyWorld:
 
-    [https://en.wikipedia.org/wiki/Daisyworld] (https://en.wikipedia.org/wiki/Daisyworld)
+  [https://en.wikipedia.org/wiki/Daisyworld](https://en.wikipedia.org/wiki/Daisyworld)
 	
 Scientific literature about Campo and LUE:
 
-    M.P. de Bakker, K. de Jong, O. Schmitz, D. Karssenberg (2017). Design and demonstration of a data model to integrate agent-based and field-based modelling. Environmental Modelling & Software, 89, 172-189, DOI: [10.1016/j.envsoft.2016.11.016] (https://doi.org/10.1016/j.envsoft.2016.11.016).
+  M.P. de Bakker, K. de Jong, O. Schmitz, D. Karssenberg (2017). Design and demonstration of a data model to integrate agent-based and field-based modelling. Environmental Modelling & Software, 89, 172-189, DOI: [10.1016/j.envsoft.2016.11.016](https://doi.org/10.1016/j.envsoft.2016.11.016). 
 	
-	K. de Jong, D. Karssenberg (2019). A physical data model for spatio-temporal objects. Environmental Modelling & Software, 122, 104553, DOI: [10.1016/j.envsoft.2019.104553] (https://doi.org/10.1016/j.envsoft.2019.104553).
+  K. de Jong, D. Karssenberg (2019). A physical data model for spatio-temporal objects. Environmental Modelling & Software, 122, 104553, DOI: [10.1016/j.envsoft.2019.104553](https://doi.org/10.1016/j.envsoft.2019.104553).
 	
-	K. de Jong, D. Panja, M. van Kreveld, D. Karssenberg (2021). An environmental modelling framework based on asynchronous many-tasks: Scalability and usability. Environmental Modelling & Software, 139, 104998, DOI: [10.1016/j.envsoft.2021.104998] (https://doi.org/10.1016/j.envsoft.2021.104998).
+  K. de Jong, D. Panja, M. van Kreveld, D. Karssenberg (2021). An environmental modelling framework based on asynchronous many-tasks: Scalability and usability. Environmental Modelling & Software, 139, 104998, DOI: [10.1016/j.envsoft.2021.104998](https://doi.org/10.1016/j.envsoft.2021.104998).
 	
