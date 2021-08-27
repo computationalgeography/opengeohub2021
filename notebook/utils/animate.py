@@ -22,17 +22,17 @@ def animate(show_notebook=True):
 
     # import data
     dataset = ldm.open_dataset('daisy_world.lue')
-    field_dataframe = campo.dataframe.select(dataset.area, property_names=[\
+    field_dataframe = campo.dataframe.select(dataset.climate, property_names=[\
         'temperature'])
-    daisy_dataframe = campo.dataframe.select(dataset.plants, property_names=[\
+    daisy_dataframe = campo.dataframe.select(dataset.daisies, property_names=[\
         'age', 'mask', 'breed'])
-    x_coords = daisy_dataframe['plants']['daisies']['breed']['coordinates'][:,0].data
-    y_coords = daisy_dataframe['plants']['daisies']['breed']['coordinates'][:,1].data
+    x_coords = daisy_dataframe['daisies']['site']['breed']['coordinates'][:,0].data
+    y_coords = daisy_dataframe['daisies']['site']['breed']['coordinates'][:,1].data
 
 
-    nr_timesteps = field_dataframe['area']['extent']['temperature'][0].shape[0]
+    nr_timesteps = field_dataframe['climate']['surface']['temperature'][0].shape[0]
 
-    field_property = field_dataframe['area']['extent']['temperature']
+    field_property = field_dataframe['climate']['surface']['temperature']
 
     # get metadata
     cellsize = 10
@@ -68,13 +68,13 @@ def animate(show_notebook=True):
     # and scatter to plot the agents
     def init():
         # temperature field
-        field_values = field_dataframe['area']['extent']['temperature'][0][0].data
+        field_values = field_dataframe['climate']['surface']['temperature'][0][0].data
         im = ax2.imshow(field_values, norm=norm, \
                         extent=extent, cmap=cmap, animated=True)
 
         # daisies, mask the alives
-        agent_values = daisy_dataframe['plants']['daisies']['breed']['values'][:,0]
-        agent_active = daisy_dataframe['plants']['daisies']['mask']['values'][:,0]
+        agent_values = daisy_dataframe['daisies']['site']['breed']['values'][:,0]
+        agent_active = daisy_dataframe['daisies']['site']['mask']['values'][:,0]
         agent_values = np.where(agent_active==1,agent_values,-99)
         agents = ax2.scatter(x_coords, y_coords, marker='o', c=agent_values,\
                               s=50, cmap=acmap, vmin=0, vmax=1, animated=True)
@@ -88,13 +88,13 @@ def animate(show_notebook=True):
         ax2.axis('off')
 
         # temperature field
-        field_values = field_dataframe['area']['extent']['temperature'][0][i].data
+        field_values = field_dataframe['climate']['surface']['temperature'][0][i].data
         im = ax2.imshow(field_values, norm=norm, \
                         extent=extent, cmap=cmap, animated=True)
 
         # daisies, mask the alives
-        agent_values = daisy_dataframe['plants']['daisies']['breed']['values'][:,i]
-        agent_active = daisy_dataframe['plants']['daisies']['mask']['values'][:,i]
+        agent_values = daisy_dataframe['daisies']['site']['breed']['values'][:,i]
+        agent_active = daisy_dataframe['daisies']['site']['mask']['values'][:,i]
         agent_values = np.where(agent_active==1,agent_values,-99)
 
         agents = ax2.scatter(x_coords, y_coords, marker='o', c=agent_values,\

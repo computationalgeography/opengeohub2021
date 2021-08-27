@@ -5,9 +5,9 @@ import campo
 
 def plot_luminosity():
     dataset = ldm.open_dataset('daisy_world.lue')
-    prop = campo.dataframe.select(dataset.area, property_names=['solar_luminosity'])
+    prop = campo.dataframe.select(dataset.climate, property_names=['solar_luminosity'])
 
-    values = prop['area']['extent']['solar_luminosity'][0].data[:,0,0]
+    values = prop['climate']['surface']['solar_luminosity'][0].data[:,0,0]
 
     plt.plot(values)
     plt.ylabel('Solar luminosity (-)')

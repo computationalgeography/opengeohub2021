@@ -8,10 +8,10 @@ import campo
 def plot_population():
     dataset = ldm.open_dataset('daisy_world.lue')
 
-    daisy_dataframe = campo.dataframe.select(dataset.plants, property_names=['mask', 'breed'])
+    daisy_dataframe = campo.dataframe.select(dataset.daisies, property_names=['mask', 'breed'])
 
-    breed = daisy_dataframe['plants']['daisies']['breed']['values']
-    mask = daisy_dataframe['plants']['daisies']['mask']['values']
+    breed = daisy_dataframe['daisies']['site']['breed']['values']
+    mask = daisy_dataframe['daisies']['site']['mask']['values']
 
     nr_timesteps = breed.shape[1]
     nr_agents = breed.shape[0]

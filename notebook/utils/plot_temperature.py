@@ -7,13 +7,13 @@ import campo
 
 def plot_temperature():
     dataset = ldm.open_dataset('daisy_world.lue')
-    init_properties = campo.dataframe.select(dataset.area, property_names=['init_temp'])
-    properties = campo.dataframe.select(dataset.area, property_names=[ 'temperature'])
+    init_properties = campo.dataframe.select(dataset.climate, property_names=['init_temp'])
+    properties = campo.dataframe.select(dataset.climate, property_names=[ 'temperature'])
 
-    t_init = init_properties['area']['extent']['init_temp'][0].data
+    t_init = init_properties['climate']['surface']['init_temp'][0].data
     t_init_mean = numpy.mean(t_init)
 
-    values = properties['area']['extent']['temperature'][0].data
+    values = properties['climate']['surface']['temperature'][0].data
 
     nr_timesteps = values.shape[0]
 
