@@ -15,7 +15,7 @@ import lue.data_model as ldm
 import campo
 
 
-warnings.filterwarnings("ignore", category=matplotlib.mplDeprecation)
+warnings.filterwarnings("ignore", category=matplotlib.MatplotlibDeprecationWarning)
 
 
 def animate(show_notebook=True):

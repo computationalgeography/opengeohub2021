@@ -5,15 +5,6 @@ dependencies:
   - python
   - numpy
   - jupyter
-  - matplotlib
-  - lue
-  - fmt=8.0.0
-  - pcraster
-  - xarray
-  - pandas
-  - gdal
-  - networkx
+  - matplotlib-base
+  - campo
   - ffmpeg
-  - pip
-  - pip:
-    - https://campo.computationalgeography.org/download/campo-0.3.0-py3-none-any.whl
