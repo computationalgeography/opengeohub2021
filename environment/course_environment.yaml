@@ -1,6 +1,7 @@
 name: fieldagents
 channels:
   - conda-forge
+  - nodefaults
 dependencies:
   - python
   - numpy
